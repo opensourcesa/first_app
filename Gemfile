@@ -5,8 +5,13 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+# http://stackoverflow.com/questions/15550624/an-error-occurred-while-installing-sqlite3-1-3-7-and-bundler-cannot-continue
+# suggestion to wrap the sqlite3 gem in a development group and have pg in the gem.
+group :development, :test do
+  gem 'sqlite3'
+end
 
+gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
