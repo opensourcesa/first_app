@@ -7,6 +7,7 @@ gem 'rails', '3.2.13'
 
 # http://stackoverflow.com/questions/15550624/an-error-occurred-while-installing-sqlite3-1-3-7-and-bundler-cannot-continue
 # suggestion to wrap the sqlite3 gem in a development group and have pg in the gem.
+# (make sure to commit the Gemfile and Gemfile.lock to git before doing a push with heroku)
 group :development, :test do
   gem 'sqlite3'
 end
